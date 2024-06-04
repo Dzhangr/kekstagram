@@ -1,3 +1,3 @@
-import { test } from './util.js';
+import { photos } from './util.js';
 
-test();
+console.dir(photos  );

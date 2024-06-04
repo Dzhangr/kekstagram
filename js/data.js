@@ -15,4 +15,18 @@ const USERS_NAME = [
   'Юлия',
   'Егор'];
 
-export { USERS_COMMENTS, USERS_NAME };
+const DESCRIPTION_PHOTO = [
+  'Без фильтров',
+  'Новая камера',
+  'Зацените фотку!',
+  'Хороший ракурс',
+  'Просто так',
+  'Из архива'];
+
+const TOTAL_PHOTOS = 25;
+
+const Likes = {min: 15, max: 200};
+const Comments = {min: 1, max: 5,
+};
+
+export { USERS_COMMENTS, USERS_NAME, TOTAL_PHOTOS, DESCRIPTION_PHOTO, Likes, Comments };

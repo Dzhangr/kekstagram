@@ -1,4 +1,4 @@
-import { USERS_COMMENTS, USERS_NAME } from './data.js';
+import { USERS_COMMENTS, USERS_NAME, TOTAL_PHOTOS, DESCRIPTION_PHOTO, Likes, Comments } from './data.js';
 
 // Функция случайного числа из диапазона двух чисел
 
@@ -24,15 +24,49 @@ const stringCount = (text, sign) => {
 
 stringCount('Это проверочное сообщение', 30);
 
-//
+// Случайный элемент массива
 
-function test() {
-  alert(USERS_COMMENTS, USERS_NAME);
+const getRandomElementArr = (array) => {
+  return array[getRandomInt(0, array.length - 1)];
 }
 
-test();
+// Создание комментариев к фотографии
 
-export { test };
+const addComments = () => {
+  let comments = [];
+
+  for (let i = 0; i < getRandomInt(Comments.min, Comments.max); i++) {
+    comments.push({
+      id: i,
+      avatar: 'img/avatar-' + getRandomInt(1, 6) + '.svg',
+      message: getRandomElementArr(USERS_COMMENTS),
+      name: getRandomElementArr(USERS_NAME),
+    });
+  }
+
+  return comments;
+}
+
+// Создание массива описаний фотографий
+
+let photos = [];
+
+const addPhotos = () => {
+
+  for (let i = 1; i < TOTAL_PHOTOS; i++) {
+    photos.push({
+      id: i,
+      url: 'photo/' + i + '.jpg',
+      description: getRandomElementArr(DESCRIPTION_PHOTO),
+      likes: getRandomInt(Likes.min, Likes.max),
+      comments: addComments(),
+    });
+  }
+};
+
+addPhotos();
+
+export { photos };
 
 
 
