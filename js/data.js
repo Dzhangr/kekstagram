@@ -26,7 +26,6 @@ const DESCRIPTION_PHOTO = [
 const TOTAL_PHOTOS = 25;
 
 const Likes = {min: 15, max: 200};
-const Comments = {min: 1, max: 5,
-};
+const Comments = {min: 1, max: 5};
 
 export { USERS_COMMENTS, USERS_NAME, TOTAL_PHOTOS, DESCRIPTION_PHOTO, Likes, Comments };

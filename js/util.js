@@ -28,7 +28,7 @@ stringCount('Это проверочное сообщение', 30);
 
 const getRandomElementArr = (array) => {
   return array[getRandomInt(0, array.length - 1)];
-}
+};
 
 // Создание комментариев к фотографии
 
@@ -45,7 +45,7 @@ const addComments = () => {
   }
 
   return comments;
-}
+};
 
 // Создание массива описаний фотографий
 
