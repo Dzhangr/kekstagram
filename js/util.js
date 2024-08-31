@@ -56,7 +56,7 @@ const addPhotos = () => {
   for (let i = 1; i < TOTAL_PHOTOS; i++) {
     photos.push({
       id: i,
-      url: 'photo/' + i + '.jpg',
+      url: 'photos/' + i + '.jpg',
       description: getRandomElementArr(DESCRIPTION_PHOTO),
       likes: getRandomInt(Likes.min, Likes.max),
       comments: addComments(),

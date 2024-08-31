@@ -1,3 +1,4 @@
-// Создать массив из 25 сгенерированных объектов. Каждый объект массива - описание фотографии.
-
+// import { photos } from './util.js';
+import { renderPhotos } from './render.js';
+renderPhotos();
 
