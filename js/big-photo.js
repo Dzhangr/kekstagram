@@ -9,7 +9,7 @@ commentsLoader.classList.add('hidden');
 
 const onBigPictureCloseClick = () => {
   bigPicture.classList.add('hidden');
-  scrollOff.classList.add('modal-open');
+  scrollOff.classList.remove('modal-open');
   bigPictureClose.removeEventListener('click', onBigPictureCloseClick);
   commentList.innerHTML = '';
 };
@@ -46,9 +46,8 @@ const show = (picture) => {
 
   bigPictureClose.addEventListener('click', onBigPictureCloseClick);
   renderComments(picture.comments);
+  
   bigPicture.classList.remove('hidden');
-
-
 };
 
 export { show };
